@@ -1,4 +1,4 @@
-package com.hillel.Piatnytsia.homeworks.homework3;
+package com.hillel.Piatnytsia.homeworks.homework4;
 
 public class Parallelepiped {
     public static void main(String[] args){
