@@ -36,7 +36,7 @@ public class CounterStrike {
         double countPlayersEachTeam = 5.0;
 
         double resultFirstTeam = (countFrag1PlayerFirstTeam + countFrag2PlayerFirstTeam + countFrag3PlayerFirstTeam + countFrag4PlayerFirstTeam + countFrag5PlayerFirstTeam);
-        System.out.println(resultFirstTeam);
+
         double averageFragFirstTeam = resultFirstTeam / countPlayersEachTeam;
         System.out.println(averageFragFirstTeam);
         double resultSecondTeam = (countFrag1PlayerSecondTeam + countFrag2PlayerSecondTeam + countFrag3PlayerSecondTeam + countFrag4PlayerSecondTeam + countFrag5PlayerSecondTeam);
