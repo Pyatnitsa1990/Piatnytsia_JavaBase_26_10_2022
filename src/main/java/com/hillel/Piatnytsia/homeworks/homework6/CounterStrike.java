@@ -33,23 +33,15 @@ public class CounterStrike {
         System.out.println("Введіть кількість фрагів п'ятого гравця другої команди:");
         double countFrag5PlayerSecondTeam = scanner.nextInt();
 
-        double countPlayersEachTeam = 5.0;
+        int countPlayersEachTeam = 5;
 
-        double resultFirstTeam = (countFrag1PlayerFirstTeam + countFrag2PlayerFirstTeam + countFrag3PlayerFirstTeam + countFrag4PlayerFirstTeam + countFrag5PlayerFirstTeam);
+        double averageFragFirstTeam = (countFrag1PlayerFirstTeam + countFrag2PlayerFirstTeam + countFrag3PlayerFirstTeam + countFrag4PlayerFirstTeam + countFrag5PlayerFirstTeam) / countPlayersEachTeam;
+        double averageFragSecondTeam = (countFrag1PlayerSecondTeam + countFrag2PlayerSecondTeam + countFrag3PlayerSecondTeam + countFrag4PlayerSecondTeam + countFrag5PlayerSecondTeam) / countPlayersEachTeam;
 
-        double averageFragFirstTeam = resultFirstTeam / countPlayersEachTeam;
-        System.out.println(averageFragFirstTeam);
-        double resultSecondTeam = (countFrag1PlayerSecondTeam + countFrag2PlayerSecondTeam + countFrag3PlayerSecondTeam + countFrag4PlayerSecondTeam + countFrag5PlayerSecondTeam);
-        System.out.println(resultSecondTeam);
-
-        double averageFragSecondTeam = resultSecondTeam / countPlayersEachTeam;
-        System.out.println(averageFragSecondTeam);
-
-
-        if (resultFirstTeam > resultSecondTeam) {
-            System.out.println("Перемогла команда " + firstTeamName + " набравши " + resultFirstTeam);
+        if (averageFragFirstTeam > averageFragSecondTeam) {
+            System.out.println("Перемогла команда " + firstTeamName + " набравши " + averageFragFirstTeam + " очків");
         } else {
-            System.out.println("Перемогла команда " + secondTeamName + " набравши " + resultSecondTeam);
+            System.out.println("Перемогла команда " + secondTeamName + " набравши " + averageFragSecondTeam + " очків");
         }
     }
 }
