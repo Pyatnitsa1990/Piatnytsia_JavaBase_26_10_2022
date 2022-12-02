@@ -38,13 +38,13 @@ public class CounterStrike {
         double averageFragFirstTeam = (countFrag1PlayerFirstTeam + countFrag2PlayerFirstTeam + countFrag3PlayerFirstTeam + countFrag4PlayerFirstTeam + countFrag5PlayerFirstTeam) / countPlayersEachTeam;
         double averageFragSecondTeam = (countFrag1PlayerSecondTeam + countFrag2PlayerSecondTeam + countFrag3PlayerSecondTeam + countFrag4PlayerSecondTeam + countFrag5PlayerSecondTeam) / countPlayersEachTeam;
 
+
         if (averageFragFirstTeam > averageFragSecondTeam) {
             System.out.println("Перемогла команда " + firstTeamName + " набравши " + averageFragFirstTeam + " очків");
-        } else if(averageFragFirstTeam < averageFragSecondTeam){
+        } else if (averageFragFirstTeam < averageFragSecondTeam) {
             System.out.println("Перемогла команда " + secondTeamName + " набравши " + averageFragSecondTeam + " очків");
-        }
-        else{
-            System.out.println("Нічия, обидві команди набрали однакову кількість балів");
+        } else {
+            System.out.println("Нічия, обидві команди набрали по " + averageFragFirstTeam + " очків");
         }
     }
 }
