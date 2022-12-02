@@ -40,8 +40,11 @@ public class CounterStrike {
 
         if (averageFragFirstTeam > averageFragSecondTeam) {
             System.out.println("Перемогла команда " + firstTeamName + " набравши " + averageFragFirstTeam + " очків");
-        } else {
+        } else if(averageFragFirstTeam < averageFragSecondTeam){
             System.out.println("Перемогла команда " + secondTeamName + " набравши " + averageFragSecondTeam + " очків");
+        }
+        else{
+            System.out.println("Нічия, обидві команди набрали однакову кількість балів");
         }
     }
 }
