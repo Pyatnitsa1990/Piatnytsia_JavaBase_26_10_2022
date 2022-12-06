@@ -16,6 +16,7 @@ public class GuessTheNumber {
                 if (number == randomComputerNumber) {
                     System.out.println("Вітаємо! Ви вгадали число загадане компьтером!");
                     break;
+
                 } else if (counterAttemptsPlayer == 2 && number != randomComputerNumber) {
                     System.out.println("Невірно");
                     System.out.println("Вибачте але ви не вгадали, пощастить іншого разу;)");
