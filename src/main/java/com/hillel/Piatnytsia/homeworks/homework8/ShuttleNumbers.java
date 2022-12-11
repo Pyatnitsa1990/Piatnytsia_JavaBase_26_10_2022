@@ -21,7 +21,7 @@ public class ShuttleNumbers {
         }
         System.out.println();
         System.out.println("Кількість шатлів нараховується: " + countShuttle);
-
+    // Другий варінт виводу шатлів у стовпчик, а не в рядок
     /*    System.out.println(i + "-й  Номер космічного шатла");
             countShuttle++;
         }
