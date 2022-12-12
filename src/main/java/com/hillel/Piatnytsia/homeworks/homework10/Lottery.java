@@ -26,14 +26,15 @@ public class Lottery {
         int[] matchedNumbers = new int[counter];
         for (int i = 0; i < numbersGuessPlayer.length; i++) {
             if (numbersMentionedFirm[i] == numbersGuessPlayer[i]) {
-                for (int j = 0; j < matchedNumbers.length; j++) {
-                    matchedNumbers[j] = numbersMentionedFirm[i];
+                for (int j = 0; j < 1; j++) {
+                    matchedNumbers[j] = i;
                 }
             }
         }
         System.out.println(Arrays.toString(numbersMentionedFirm));
         System.out.println(Arrays.toString(numbersGuessPlayer));
         System.out.println("Кількість збігів: " + counter);
+        Arrays.sort(matchedNumbers);
         System.out.println("Збіги під індексом: " + Arrays.toString(matchedNumbers));
     }
 }
