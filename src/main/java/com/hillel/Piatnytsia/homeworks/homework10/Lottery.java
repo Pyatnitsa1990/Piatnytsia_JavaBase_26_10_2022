@@ -23,24 +23,22 @@ public class Lottery {
                 counter++;
             }
         }
-        int[] matchedNumbers = new int[counter];
-        for (int i = 0; i < numbersGuessPlayer.length; i++) {
-            if (numbersMentionedFirm[i] == numbersGuessPlayer[i]) {
-                for (int j = 0; j < matchedNumbers.length  ; j++) {
-
-                    matchedNumbers[j] = i;
-                }
-            }
-                else{
-                    continue;
 
 
-            }
-        }
         System.out.println(Arrays.toString(numbersMentionedFirm));
         System.out.println(Arrays.toString(numbersGuessPlayer));
-        System.out.println("Кількість збігів: " + counter);
-        Arrays.sort(matchedNumbers);
-        System.out.println("Збіги під індексом: " + Arrays.toString(matchedNumbers));
+
+        if (counter > 0) {
+            System.out.println("Кількість збігів: " + counter);
+            System.out.print("Збіги під індексом: ");
+            for (int i = 0; i < numbersGuessPlayer.length; i++) {
+                if (numbersMentionedFirm[i] == numbersGuessPlayer[i]) {
+                    System.out.print(i + " ");
+                }
+            }
+        }
+        else{
+            System.out.println("Збігів немає");
+        }
     }
 }
