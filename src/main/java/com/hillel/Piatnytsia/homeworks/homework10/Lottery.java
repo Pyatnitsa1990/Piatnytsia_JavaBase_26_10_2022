@@ -16,28 +16,20 @@ public class Lottery {
         }
         Arrays.sort(numbersMentionedFirm);
         Arrays.sort(numbersGuessPlayer);
-
+        System.out.println(Arrays.toString(numbersMentionedFirm));
+        System.out.println(Arrays.toString(numbersGuessPlayer));
+        String index = " ";
         int counter = 0;
         for (int i = 0; i < numbersGuessPlayer.length; i++) {
             if (numbersMentionedFirm[i] == numbersGuessPlayer[i]) {
                 counter++;
+                index += Integer.toString(i) + "й ";
             }
         }
-
-
-        System.out.println(Arrays.toString(numbersMentionedFirm));
-        System.out.println(Arrays.toString(numbersGuessPlayer));
-
         if (counter > 0) {
             System.out.println("Кількість збігів: " + counter);
-            System.out.print("Збіги під індексом: ");
-            for (int i = 0; i < numbersGuessPlayer.length; i++) {
-                if (numbersMentionedFirm[i] == numbersGuessPlayer[i]) {
-                    System.out.print(i + " ");
-                }
-            }
-        }
-        else{
+            System.out.println("Збіглися" + index + "індекси");
+        } else {
             System.out.println("Збігів немає");
         }
     }
