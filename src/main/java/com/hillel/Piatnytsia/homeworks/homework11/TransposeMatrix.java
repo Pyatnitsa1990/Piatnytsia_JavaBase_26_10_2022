@@ -1,10 +1,12 @@
 package com.hillel.Piatnytsia.homeworks.homework11;
 
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class TransposeMatrix {
     public static void main(String[] args) {
+        Random random = new Random();
         System.out.println("Будь-ласка введіть розмір матриці");
         Scanner scanner = new Scanner(System.in);
         int counter = 0;
@@ -19,22 +21,20 @@ public class TransposeMatrix {
                 }
                 int[][] originalMatrix = new int[row][column];
                 int[][] transposeMatrix = new int[column][row];
-                System.out.println();
-                System.out.println("Оригінальна матриця");
+
+                System.out.println("\nОригінальна матриця");
                 for (int i = 0; i < originalMatrix.length; i++) {
                     for (int j = 0; j < originalMatrix[i].length; j++) {
-                        originalMatrix[i][j] = (int) (Math.random() * 11);
+                        originalMatrix[i][j] = random.nextInt(100);
                         System.out.print(originalMatrix[i][j] + "\t");
                     }
                     System.out.println();
                 }
-                System.out.println();
-                System.out.println("Транспонована матриця");
+
+                System.out.println("\nТранспонована матриця");
                 for (int i = 0; i < transposeMatrix.length; i++) {
                     for (int j = 0; j < transposeMatrix[i].length; j++) {
-                        int temp = transposeMatrix[i][j];
                         transposeMatrix[i][j] = originalMatrix[j][i];
-                        originalMatrix[j][i] = temp;
                         System.out.print(transposeMatrix[i][j] + "\t");
                     }
                     System.out.println();
