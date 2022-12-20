@@ -18,7 +18,7 @@ public class TransposeMatrix {
                     continue;
                 }
                 int[][] originalMatrix = new int[row][column];
-                int[][] transposeMatrix = new int[column][row];
+                int[][] transposeMatrixe = new int[column][row];
                 for (int i = 0; i < originalMatrix.length; i++) {
                     for (int j = 0; j < originalMatrix[i].length; j++) {
                         originalMatrix[i][j] = (int) (Math.random() * 11);
@@ -27,18 +27,18 @@ public class TransposeMatrix {
                     System.out.println();
                 }
 
-                for (int i = 0; i < transposeMatrix.length; i++) {
-                    for (int j = 0; j < transposeMatrix[i].length; j++) {
-                        int temp = transposeMatrix[i][j];
-                        transposeMatrix[i][j] = originalMatrix[j][i];
+                for (int i = 0; i < transposeMatrixe.length; i++) {
+                    for (int j = 0; j < transposeMatrixe[i].length; j++) {
+                        int temp = transposeMatrixe[i][j];
+                        transposeMatrixe[i][j] = originalMatrix[j][i];
                         originalMatrix[j][i] = temp;
                     }
                 }
                 System.out.println("after");
 
-                for (int i = 0; i < transposeMatrix.length; i++) {
-                    for (int j = 0; j < transposeMatrix[i].length; j++) {
-                        System.out.print(transposeMatrix[i][j] + "\t");
+                for (int i = 0; i < transposeMatrixe.length; i++) {
+                    for (int j = 0; j < transposeMatrixe[i].length; j++) {
+                        System.out.print(transposeMatrixe[i][j] + "\t");
                     }
                     System.out.println();
                 }
